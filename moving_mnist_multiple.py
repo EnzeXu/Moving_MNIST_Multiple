@@ -90,10 +90,10 @@ def generate_moving_mnist_binary(n_digit=1):
     # print(torch.max(moving_mnist), torch.min(moving_mnist))
     np.save(f'output_dataset/moving_mnist_binary_{n_digit}_digit_1000.npy', moving_mnist.detach().numpy())
 
-    one_time_example(torch.permute(moving_mnist, [1, 0, 2, 3]).detach().numpy(), f'dataset/moving_mnist_binary_{n_digit}_example', idx_list=range(10))
+    one_time_example(torch.permute(moving_mnist, [1, 0, 2, 3]).detach().numpy(), f'dataset/moving_mnist_binary_{n_digit}_example', idx_list=range(20))
 
 
 if __name__ == "__main__":
-    generate_moving_mnist_binary(1)
-    # generate_moving_mnist_binary(2)
-    # generate_moving_mnist_binary(3)
+    # generate_moving_mnist_binary(1)
+    generate_moving_mnist_binary(2)
+    generate_moving_mnist_binary(3)
